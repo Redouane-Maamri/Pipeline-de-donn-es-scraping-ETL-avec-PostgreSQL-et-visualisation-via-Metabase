@@ -1,0 +1,67 @@
+services:
+
+  postgres:
+    image: postgres:15
+    container_name: news_postgres
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: news_db
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  metabase:
+    image: metabase/metabase
+    container_name: news_metabase
+
+    ports:
+      - "3000:3000"
+
+    depends_on:
+      - postgres
+
+    volumes:
+      - metabase_data:/metabase-data
+
+  pipeline:
+    build: .
+
+    container_name: news_pipeline
+
+    depends_on:
+      - postgres
+
+    volumes:
+      - .:/app
+
+    command: python main.py
+
+  airflow:
+    image: apache/airflow:2.9.1
+
+    container_name: news_airflow
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - postgres
+
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./airflow_logs:/opt/airflow/logs
+      - .:/app
+
+    command: standalone
+
+volumes:
+  postgres_data:
+  metabase_data:

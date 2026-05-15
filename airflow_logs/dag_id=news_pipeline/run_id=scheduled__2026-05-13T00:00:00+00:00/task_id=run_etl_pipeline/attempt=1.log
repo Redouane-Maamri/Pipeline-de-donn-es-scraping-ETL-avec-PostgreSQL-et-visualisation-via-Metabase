@@ -1,0 +1,50 @@
+[2026-05-14T00:10:20.962+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-14T00:10:21.013+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: news_pipeline.run_etl_pipeline scheduled__2026-05-13T00:00:00+00:00 [queued]>
+[2026-05-14T00:10:21.016+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: news_pipeline.run_etl_pipeline scheduled__2026-05-13T00:00:00+00:00 [queued]>
+[2026-05-14T00:10:21.016+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-05-14T00:10:21.024+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_etl_pipeline> on 2026-05-13 00:00:00+00:00
+[2026-05-14T00:10:21.042+0000] {standard_task_runner.py:63} INFO - Started process 2065 to run task
+[2026-05-14T00:10:21.049+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'news_pipeline', 'run_etl_pipeline', 'scheduled__2026-05-13T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/news_pipeline_dag.py', '--cfg-path', '/tmp/tmp1v6lss9a']
+[2026-05-14T00:10:21.052+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask run_etl_pipeline
+[2026-05-14T00:10:21.081+0000] {task_command.py:426} INFO - Running <TaskInstance: news_pipeline.run_etl_pipeline scheduled__2026-05-13T00:00:00+00:00 [running]> on host 6220c7d4145b
+[2026-05-14T00:10:21.134+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='redouane' AIRFLOW_CTX_DAG_ID='news_pipeline' AIRFLOW_CTX_TASK_ID='run_etl_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2026-05-13T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-13T00:00:00+00:00'
+[2026-05-14T00:10:21.134+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-14T00:10:21.149+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-14T00:10:21.150+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /app && python main.py']
+[2026-05-14T00:10:21.167+0000] {subprocess.py:86} INFO - Output:
+[2026-05-14T00:10:30.760+0000] {subprocess.py:93} INFO - Hespress links found: 10
+[2026-05-14T00:10:30.765+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a7%d9%84%d9%86%d9%8a%d8%a7%d8%a8%d8%a9-%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d8%b3%d8%ac%d9%86-%d8%b3%d8%a7%d8%b1%d9%83%d9%88%d8%b2%d9%8a-7-%d8%b3%d9%86%d9%88%d8%a7%d8%aa-1746332.html
+[2026-05-14T00:10:30.766+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a7%d8%b4%d9%88%d9%8a%d9%83%d8%a9-%d9%8a%d8%b1%d8%a8%d8%b7-%d8%a7%d9%84%d8%b3%d9%8a%d9%86%d9%85%d8%a7-%d8%a8%d8%a7%d9%84%d8%b9%d9%84%d9%88%d9%85-%d8%a7%d9%84%d8%a5%d9%86%d8%b3%d8%a7%d9%86%d9%8a-1745802.html
+[2026-05-14T00:10:30.766+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a7%d9%84%d8%af%d8%a7%d8%b1-%d8%a7%d9%84%d8%a8%d9%8a%d8%b6%d8%a7%d8%a1-%d8%aa%d8%b9%d8%aa%d8%b2%d9%85-%d8%aa%d8%ad%d9%88%d9%8a%d9%84-%d8%a7%d9%84%d9%86%d9%81%d8%a7%d9%8a%d8%a7%d8%aa-%d8%a5%d9%84-1746118.html
+[2026-05-14T00:10:30.766+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a8%d9%8a%d8%aa%d9%8a%d8%b3-%d9%8a%d8%a4%d8%ac%d9%84-%d8%ad%d8%b3%d9%85-%d8%b5%d9%81%d9%82%d8%a9-%d8%a3%d9%85%d8%b1%d8%a7%d8%a8%d8%b7-1745798.html
+[2026-05-14T00:10:30.767+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d9%85%d8%a7%d8%b3%d8%aa%d8%b1-%d8%b4%d9%8a%d9%81-%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d8%a7-%d9%8a%d8%ad%d8%aa%d9%81%d9%8a-%d8%a8%d8%a7%d9%84%d9%85%d8%b7%d8%a8%d8%ae-%d8%a7%d9%84%d9%85-1743108.html
+[2026-05-14T00:10:30.767+0000] {subprocess.py:93} INFO - ❌ Failed: https://www.hespress.com/%d9%87%d9%88%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%b3-%d9%81%d9%8a-%d8%b2%d9%85%d9%86-%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%85%d9%86-1744707.html | HTTPSConnectionPool(host='www.hespress.com', port=443): Max retries exceeded with url: /%D9%87%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3-%D9%81%D9%8A-%D8%B2%D9%85%D9%86-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%85%D9%86-1744707.html (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+[2026-05-14T00:10:30.768+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%aa%d8%b3%d9%88%d9%86%d8%a7%d9%85%d9%8a-%d8%a7%d9%84%d8%a3%d8%b3%d9%84%d8%ad%d8%a9-%d8%a7%d9%84%d8%a8%d9%8a%d8%b6%d8%a7%d8%a1-1745641.html
+[2026-05-14T00:10:30.768+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%b9%d8%b5%d8%a7%d8%a8%d8%a9-%d8%a8%d9%84%d8%ba%d8%a7%d8%b1%d9%8a%d8%a9-%d8%aa%d8%b3%d8%aa%d8%b9%d9%8a%d9%86-%d8%a8%d8%a3%d8%b1%d9%82%d8%a7%d9%85-%d9%87%d8%a7%d8%aa%d9%81%d9%8a%d8%a9-%d9%85%d8%ba-1746111.html
+[2026-05-14T00:10:30.768+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d9%88%d8%b2%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d9%81%d9%84%d8%a7%d8%ad%d8%a9-%d8%aa%d8%b6%d8%a8%d8%b7-%d8%aa%d8%b3%d9%88%d9%8a%d9%82-%d8%a7%d9%84%d9%82%d9%85%d8%ad-%d8%a7%d9%84%d9%84%d9%91%d9%8a%d9%86-1745578.html
+[2026-05-14T00:10:30.769+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a7%d9%84%d8%ac%d9%8a%d8%b4-%d8%a7%d9%84%d9%85%d8%ba%d8%b1%d8%a8%d9%8a-%d9%8a%d9%86%d8%aa%d8%b4%d9%84-%d8%ac%d8%ab%d8%a9-%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a%d8%a9-1746535.html
+[2026-05-14T00:10:30.769+0000] {subprocess.py:93} INFO - Akhbarona links found: 10
+[2026-05-14T00:10:30.769+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/national/425760.html
+[2026-05-14T00:10:30.769+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/economy/425764.html
+[2026-05-14T00:10:30.769+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/advertising.html
+[2026-05-14T00:10:30.770+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/writers/425113.html
+[2026-05-14T00:10:30.770+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/health/425716.html
+[2026-05-14T00:10:30.770+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/culture/425747.html
+[2026-05-14T00:10:30.770+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/writers/424951.html
+[2026-05-14T00:10:30.770+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/technology/425735.html
+[2026-05-14T00:10:30.770+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/society/425731.html
+[2026-05-14T00:10:30.771+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/videos/425733.html
+[2026-05-14T00:10:30.771+0000] {subprocess.py:93} INFO - Total articles scraped: 19 ✅
+[2026-05-14T00:10:30.771+0000] {subprocess.py:93} INFO - Silver layer created ✅
+[2026-05-14T00:10:30.771+0000] {subprocess.py:93} INFO - Gold metrics created ✅
+[2026-05-14T00:10:30.771+0000] {subprocess.py:93} INFO - Top keywords created ✅
+[2026-05-14T00:10:30.771+0000] {subprocess.py:93} INFO - Articles loaded ✅
+[2026-05-14T00:10:30.771+0000] {subprocess.py:93} INFO - Keywords loaded ✅
+[2026-05-14T00:10:30.772+0000] {subprocess.py:93} INFO - Data loaded to PostgreSQL 🚀
+[2026-05-14T00:10:30.772+0000] {subprocess.py:93} INFO - Pipeline DONE 🚀
+[2026-05-14T00:10:30.953+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-05-14T00:10:30.956+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-14T00:10:31.032+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=news_pipeline, task_id=run_etl_pipeline, run_id=scheduled__2026-05-13T00:00:00+00:00, execution_date=20260513T000000, start_date=20260514T001021, end_date=20260514T001031
+[2026-05-14T00:10:31.088+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-05-14T00:10:31.127+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-14T00:10:31.128+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import json
 
 headers = {
     "User-Agent": "Mozilla/5.0"
@@ -23,7 +22,7 @@ def get_article_links():
 
     # remove duplicates + limit
     links = list(set(links))
-    return links[:10]  # take 10 articles
+    return links[:10]
 
 
 # 2️⃣ Scrape one article
@@ -35,7 +34,11 @@ def scrape_article(url):
     title = title_tag.get_text(strip=True) if title_tag else "No title"
 
     paragraphs = soup.find_all("p")
-    content = " ".join([p.get_text(strip=True) for p in paragraphs if p.get_text(strip=True)])
+    content = " ".join([
+        p.get_text(strip=True)
+        for p in paragraphs
+        if p.get_text(strip=True)
+    ])
 
     return {
         "title": title,
@@ -45,22 +48,23 @@ def scrape_article(url):
     }
 
 
-# 3️⃣ Main scrape
-def scrape():
+# 3️⃣ Main function (UPDATED ✅)
+def scrape_hespress():
     articles = []
 
     links = get_article_links()
-    print(f"Found {len(links)} links")
+    print(f"Hespress links found: {len(links)}")
 
     for link in links:
         try:
             article = scrape_article(link)
-            articles.append(article)
-            print(f"✔ Scraped: {link}")
-        except:
-            print(f"❌ Failed: {link}")
 
-    with open("data/bronze/articles.json", "w", encoding="utf-8") as f:
-        json.dump(articles, f, ensure_ascii=False, indent=2)
+            # filter weak content
+            if len(article["content"].split()) > 50:
+                articles.append(article)
+                print(f"✔ Hespress: {link}")
 
-    print("All articles saved ✅")
+        except Exception as e:
+            print(f"❌ Failed: {link} | {e}")
+
+    return articles

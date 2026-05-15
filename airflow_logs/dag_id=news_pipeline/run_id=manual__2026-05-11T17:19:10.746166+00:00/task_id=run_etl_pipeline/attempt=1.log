@@ -1,0 +1,50 @@
+[2026-05-11T17:19:16.655+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-11T17:19:16.775+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: news_pipeline.run_etl_pipeline manual__2026-05-11T17:19:10.746166+00:00 [queued]>
+[2026-05-11T17:19:16.777+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: news_pipeline.run_etl_pipeline manual__2026-05-11T17:19:10.746166+00:00 [queued]>
+[2026-05-11T17:19:16.777+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-05-11T17:19:16.801+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_etl_pipeline> on 2026-05-11 17:19:10.746166+00:00
+[2026-05-11T17:19:16.837+0000] {standard_task_runner.py:63} INFO - Started process 174 to run task
+[2026-05-11T17:19:16.875+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'news_pipeline', 'run_etl_pipeline', 'manual__2026-05-11T17:19:10.746166+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/news_pipeline_dag.py', '--cfg-path', '/tmp/tmp8t0hu2os']
+[2026-05-11T17:19:16.885+0000] {standard_task_runner.py:91} INFO - Job 3: Subtask run_etl_pipeline
+[2026-05-11T17:19:17.008+0000] {task_command.py:426} INFO - Running <TaskInstance: news_pipeline.run_etl_pipeline manual__2026-05-11T17:19:10.746166+00:00 [running]> on host 6220c7d4145b
+[2026-05-11T17:19:17.183+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='redouane' AIRFLOW_CTX_DAG_ID='news_pipeline' AIRFLOW_CTX_TASK_ID='run_etl_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2026-05-11T17:19:10.746166+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-11T17:19:10.746166+00:00'
+[2026-05-11T17:19:17.184+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-11T17:19:17.477+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-11T17:19:17.482+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /app && python main.py']
+[2026-05-11T17:19:17.514+0000] {subprocess.py:86} INFO - Output:
+[2026-05-11T17:19:30.539+0000] {subprocess.py:93} INFO - Hespress links found: 10
+[2026-05-11T17:19:30.552+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a7%d9%84%d9%85%d9%82%d8%a7%d9%88%d9%85%d8%a9-%d8%aa%d8%ae%d9%84%d8%af-%d8%b0%d9%83%d8%b1%d9%89-%d9%85%d8%b9%d8%a7%d8%b1%d9%83-%d8%a3%d9%8a%d8%aa-%d8%b9%d8%a8%d8%af-%d8%a7%d9%84%d9%84%d9%87-1732988.html
+[2026-05-11T17:19:30.558+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a8%d9%88%d8%b1%d8%b5%d8%a9-%d8%a7%d9%84%d8%af%d8%a7%d8%b1-%d8%a7%d9%84%d8%a8%d9%8a%d8%b6%d8%a7%d8%a1-%d8%aa%d9%81%d8%aa%d8%aa%d8%ad-%d8%b9%d9%84%d9%89-%d8%a7%d9%86%d8%ae%d9%81%d8%a7%d8%b6-3-1745023.html
+[2026-05-11T17:19:30.559+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d9%85%d8%b9%d8%b1%d8%b6-%d8%a7%d9%84%d9%83%d8%aa%d8%a7%d8%a8-%d9%8a%d8%ac%d8%b0%d8%a8-%d9%86%d8%b5%d9%81-%d9%85%d9%84%d9%8a%d9%88%d9%86-%d8%b2%d8%a7%d8%a6%d8%b1-1745120.html
+[2026-05-11T17:19:30.560+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a7%d9%84%d8%a7%d9%86%d8%aa%d8%ae%d8%a7%d8%a8%d8%a7%d8%aa-%d9%83%d9%8e%d9%85%d8%a7-%d8%b9%d8%a7%d8%b4%d9%8e%d9%87%d8%a7-%d8%b7%d9%81%d9%84%d9%8c-1745207.html
+[2026-05-11T17:19:30.561+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d9%84%d9%85%d8%b1%d8%a7%d8%a8%d8%b7-%d8%aa%d9%82%d8%af%d9%85-%d8%a3%d8%ae%d9%84%d8%a7%d9%82-%d8%a7%d9%84%d9%82%d8%b1%d8%a2%d9%86-%d8%a7%d9%84%d9%85%d9%86%d8%b3%d9%8a%d8%a9-1744744.html
+[2026-05-11T17:19:30.561+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a7%d9%84%d9%85%d8%ba%d9%86%d9%8a%d8%a9-%d8%a8%d9%88%d9%86%d9%8a-%d8%aa%d8%a7%d9%8a%d9%84%d9%88%d8%b1-%d8%aa%d8%af%d8%ae%d9%84-%d8%ba%d9%8a%d8%a8%d9%88%d8%a8%d8%a9-%d8%a8%d8%b9%d8%af-%d8%b9%d9%85-1744022.html
+[2026-05-11T17:19:30.561+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d9%87%d9%88%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%b3-%d9%81%d9%8a-%d8%b2%d9%85%d9%86-%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%85%d9%86-1744707.html
+[2026-05-11T17:19:30.561+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a8%d8%b9%d8%af-%d8%b3%d9%86%d8%aa%d9%8a%d9%86-%d8%ae%d9%84%d9%81-%d8%a3%d8%b3%d9%88%d8%a7%d8%b1-%d8%a7%d9%84%d8%ba%d8%b1%d8%a8%d8%a9-%d9%85%d8%ba%d8%a7%d8%b1%d8%a8%d8%a9-%d9%85%d8%ad%d8%aa%d8%ac-1745179.html
+[2026-05-11T17:19:30.562+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d8%a7%d9%84%d9%86%d9%87%d8%b6%d8%a9-%d8%a7%d9%84%d8%a8%d8%b1%d9%83%d8%a7%d9%86%d9%8a%d8%a9-%d8%aa%d9%86%d8%aa%d8%b5%d8%b1-%d9%81%d9%8a-%d9%85%d9%83%d9%86%d8%a7%d8%b3-%d9%88%d8%b5%d8%af%d8%a7%d8%b1-1744887.html
+[2026-05-11T17:19:30.562+0000] {subprocess.py:93} INFO - ✔ Hespress: https://www.hespress.com/%d9%83%d9%84%d8%a7%d9%85-%d9%81%d9%8a-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b3%d8%a9-3-1740791.html
+[2026-05-11T17:19:30.562+0000] {subprocess.py:93} INFO - Akhbarona links found: 10
+[2026-05-11T17:19:30.562+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/divers/425618.html
+[2026-05-11T17:19:30.562+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/society/425599.html
+[2026-05-11T17:19:30.562+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/technology/index.1.html
+[2026-05-11T17:19:30.563+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/videos/425566.html
+[2026-05-11T17:19:30.563+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/culture/index.1.html
+[2026-05-11T17:19:30.563+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/health/425625.html
+[2026-05-11T17:19:30.563+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/last/425627.html
+[2026-05-11T17:19:30.563+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/world/index.1.html
+[2026-05-11T17:19:30.563+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/videos/425577.html
+[2026-05-11T17:19:30.564+0000] {subprocess.py:93} INFO - ✔ Akhbarona: https://www.akhbarona.com/writers/424861.html
+[2026-05-11T17:19:30.564+0000] {subprocess.py:93} INFO - Total articles scraped: 20 ✅
+[2026-05-11T17:19:30.564+0000] {subprocess.py:93} INFO - Silver layer created ✅
+[2026-05-11T17:19:30.564+0000] {subprocess.py:93} INFO - Gold metrics created ✅
+[2026-05-11T17:19:30.564+0000] {subprocess.py:93} INFO - Top keywords created ✅
+[2026-05-11T17:19:30.564+0000] {subprocess.py:93} INFO - Articles loaded ✅
+[2026-05-11T17:19:30.564+0000] {subprocess.py:93} INFO - Keywords loaded ✅
+[2026-05-11T17:19:30.564+0000] {subprocess.py:93} INFO - Data loaded to PostgreSQL 🚀
+[2026-05-11T17:19:30.565+0000] {subprocess.py:93} INFO - Pipeline DONE 🚀
+[2026-05-11T17:19:30.703+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-05-11T17:19:30.705+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-11T17:19:30.746+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=news_pipeline, task_id=run_etl_pipeline, run_id=manual__2026-05-11T17:19:10.746166+00:00, execution_date=20260511T171910, start_date=20260511T171916, end_date=20260511T171930
+[2026-05-11T17:19:30.812+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-05-11T17:19:30.839+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-11T17:19:30.840+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
